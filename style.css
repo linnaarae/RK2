@@ -1,0 +1,139 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+.header-container {
+    background-color: #003049;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+    width: 100%;
+    height: 4rem;
+    align-items: center;
+}
+
+.header-container-logo img {
+    z-index: 100;
+    margin-top: 0;
+    margin-left: 0;
+    width: 2.5cm;
+    height: 2.5cm;
+}
+
+.header-container-nav-ul {
+    list-style: none;
+    display: flex;
+}
+
+.header-container-nav-ul li {
+    font-size: 1.1rem;
+    padding: 0 1.7rem;
+}
+
+a {
+    text-decoration: none;
+    color: #F77F00;
+}
+
+.header-container-nav-ul a:hover {
+    color: white;
+}
+
+.header-container-nav-ul a:active {
+    color: white;
+}
+
+.menu-burger-header{
+    display: none;
+}
+
+/*MAIN*/
+
+@media screen and (max-width: 320px) {
+    .header-container-nav {
+        display: block;
+        top: 55px;
+        left: 0;
+        background-color: #003049;
+        position: absolute;
+        width: 100%;
+        box-shadow: 0 4px 2px -2px rgba(36, 36, 36, 0.17);
+        left: -100%;
+        transition: all 0.4s ease;
+    }
+
+    .header-container-nav-ul a:hover {
+        color: white;
+    }
+
+    .header-container-nav.open-menu {
+        left: 0;
+    }
+
+    .header-container-nav-ul {
+        display: block;
+    }
+
+    .header-container-nav li {
+        margin: 40px 0px 40px 33px;
+    }
+
+    .menu-burger-header {
+        position: relative; 
+        width: 40px; 
+        height: 35px;
+        display: block;
+    }
+
+    .menu-burger-header span, .menu-burger-header:after, .menu-burger-header:before{
+        height: 3px;
+        width: 100%;
+        position: absolute;
+        background: #515758;
+        margin: 0 auto;
+    }
+
+    .menu-burger-header span{
+        top: 16px;
+    }
+
+    .menu-burger-header:after, .menu-burger-header:before{
+        content: '';
+    }
+
+    .menu-burger-header:after{
+        bottom: 5px;
+    }
+
+    .menu-burger-header:before{
+        top: 5px;
+    }
+
+    .menu-burger-header.open-menu span {
+        opacity:0; 
+        transition: 0.5s; 
+    }
+
+    .menu-burger-header.open-menu:before {
+        transform: rotate(38deg);
+        top: 16px;
+        transition: 0.4s;
+    }
+
+    .menu-burger-header.open-menu:after {
+        transform: rotate(-38deg);
+        bottom: 16px;
+        transition: 0.4s;
+    }
+
+    .container-news, .container-schedule, .container-media {
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .container-news-column, .container-schedule-match, .container-media-img {
+        width: 80%;
+        
+    }
+}
