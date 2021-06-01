@@ -78,7 +78,7 @@ a {
 
 .main-container-kind1, .main-container-kind2, .main-container-kind3 {
     width: 100%;
-    height: 100px;
+    height: auto;
     display: flex;
     justify-content: space-around;
     flex-direction: row;
@@ -92,12 +92,24 @@ h2 {
 
 .main-container-kind-block {
     width: 30%;
-    height: 25rem;
+    height: auto;
     background-color: #6d6d6d;
     border: 1px solid rgb(255, 255, 255);
+    text-align: center;
 }
 
-.book1 {
+p, h3 {
+    color: white;
+    font-weight: lighter;
+}
+
+.book {
+    height: 7cm;
+    width: 5cm;
+    z-index: 100;
+}
+
+.book2 {
     height: 7cm;
     width: 5cm;
     z-index: 100;
